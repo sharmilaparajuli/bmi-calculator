@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <h2>BMI CALCULATOR</h2>
+    <form action="" method="POST">
+        <label for="weight">weight</label>
+        <input type="number" name = "weight" id = "w">
+        <br></br>
+        <label for="height">Height</label>
+        <input type="number" name = "height" id = "h">
+        <br>
+        <br>
+        <input type="button" value = "calculate" onclick="BMI()">
+        <h2 class = "text-input">BMI =<b id = "bmi_index"></b></h2>
+    </form>
+
+
+
+
+<script>
+    function BMI(){
+        var w = document.getElementById('w').value;
+        var h = document.getElementById('h').value;
+        var bmi = w/(h*h);
+        var userBMI = document.getElementById("bmi_index");
+        userBMI.textContent = bmi.toFixed(2);
+    }
+</script>
+    
+
+</body>
+
+</html>
